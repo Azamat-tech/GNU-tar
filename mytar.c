@@ -96,8 +96,8 @@ void process_arguments(int argc, char *argv[], int *file_selected, char **file, 
     char char_zero = argv[i][0];
     char char_one  = argv[i][1];
     // options 
-    if (char_zero == '-') { 
-      switch (char_one) { 
+    if (char_zero == '-') 
+      switch (char_one) {
         case 'f':
           check_foption(argc, argv, i, op->list);
           op->file = (char_one == 'f');
@@ -108,12 +108,10 @@ void process_arguments(int argc, char *argv[], int *file_selected, char **file, 
           op->list = (char_one == 't');
           break;
       }
-    }
     // arguments
-    else if (op->list) { 
+    else if (op->list) 
       if (file_selected && pos->start == 0) 
         pos->start = i;
-    }
   }
 
   if (op->list && !op->file) 
