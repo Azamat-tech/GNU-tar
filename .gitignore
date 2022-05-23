@@ -1,3 +1,5 @@
 stef/
 *.o
+*.exe
 *.tar
+mytar
