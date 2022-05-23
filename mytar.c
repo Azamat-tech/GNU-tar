@@ -112,9 +112,13 @@ void process_arguments(int argc, char *argv[], int *file_selected, char **file, 
           errx(2, UNKNOWN_OPTION, char_one);
       }
     // arguments
-    else if (op->list) 
+    else if (op->list) {
       if (file_selected && pos->start == 0) 
         pos->start = i;
+    }
+    else if (!op->file && !op->list) {
+      errx(2, UNKNOWN_OPTION, char_one);
+    }
   }
 
   if (op->list && !op->file) 

@@ -1,9 +1,5 @@
-# *
-# !*.c
-# !Makefile
-# !*.sh
-# !tests/
-# !README
-stef/
-*.tar
-dir.LnCxR/
+*
+!*.c
+!Makefile
+!*.sh
+!README
