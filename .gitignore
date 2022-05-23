@@ -1,6 +1,9 @@
-*
-!*.c
-!Makefile
-!*.sh
-!tests/
-!README
+# *
+# !*.c
+# !Makefile
+# !*.sh
+# !tests/
+# !README
+stef/
+dir.*
+*.tar
