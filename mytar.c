@@ -18,6 +18,7 @@
 #define FAILURE_STATUS    "Exiting with failure status due to previous errors"
 #define ZERO_BLOCK        "%s: A lone zero block at %d\n"
 #define NOT_FOUND_IN_TAR  "%s: %s: Not found in archive\n"
+#define UNKNOWN_OPTION    "invalid option -- '%c'"
 
 typedef struct posix_header {            /* byte offset */
   char name[100];               /*   0 */
@@ -107,6 +108,8 @@ void process_arguments(int argc, char *argv[], int *file_selected, char **file, 
         case 't':
           op->list = (char_one == 't');
           break;
+        default:
+          errx(2, UNKNOWN_OPTION, char_one);
       }
     // arguments
     else if (op->list) 
