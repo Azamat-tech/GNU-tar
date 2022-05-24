@@ -1,4 +1,5 @@
 stef/
+tests/
 *.o
 *.exe
 *.tar
